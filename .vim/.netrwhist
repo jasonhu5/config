@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/fyp/FYP/fyp_ws/scripts/prepData'
+let g:netrw_dirhist_2='/home/fyp/HDD/data/170408/test'
+let g:netrw_dirhist_3='/home/fyp/HDD/data/170408/train'
+let g:netrw_dirhist_4='/home/fyp/HDD/data/170408/test'
+let g:netrw_dirhist_5='/home/fyp/Projects'
+let g:netrw_dirhist_6='/home/fyp/Projects/cugl'
+let g:netrw_dirhist_7='/home/fyp/Projects'
+let g:netrw_dirhist_8='/home/fyp/Projects/cugl'
