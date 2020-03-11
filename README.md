@@ -16,3 +16,6 @@
 
 ### TODO
 * fish
+* VSCode plugins
+    * Ref [link](https://www.ubuntupit.com/best-visual-studio-code-extensions-for-programmers/)
+* chrome extensions

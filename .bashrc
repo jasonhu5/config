@@ -133,6 +133,7 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git pull"
+alias gd="git diff"
 
 # modifier keys
 setxkbmap -option "caps:ctrl_modifier"
