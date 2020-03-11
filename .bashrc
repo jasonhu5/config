@@ -127,6 +127,8 @@ fi
 # fi
 
 alias sp="source ~/.bash_profile; source ~/.bashrc"
+alias b="cd .."
+alias c="clear"
 
 # git aliases
 alias gs="git status"
@@ -137,4 +139,3 @@ alias gd="git diff"
 
 # modifier keys
 setxkbmap -option "caps:ctrl_modifier"
-alias b="cd .."

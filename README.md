@@ -14,6 +14,12 @@
 ### Git
 * [Remember credentials](https://git-scm.com/docs/git-credential-store)
 
+### CopyQ
+* [Better install with PPA](https://hluk.github.io/CopyQ/)
+
+### Albert
+* [DEB based manager](https://albertlauncher.github.io/docs/installing/)
+
 ### TODO
 * fish
 * VSCode plugins
