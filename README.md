@@ -2,6 +2,7 @@
 
 * bash
 * tmux
+  * [Add plugins](https://github.com/tmux-plugins/tpm)
 * inputrc
 * vim
 
