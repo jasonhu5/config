@@ -5,6 +5,7 @@
   * [Add plugins](https://github.com/tmux-plugins/tpm)
 * inputrc
 * vim
+* guake terminal: `sudo apt-get install guake -y`
 
 ### Ubuntu adjust partition
 * [use gparted](https://askubuntu.com/questions/66000/how-to-merge-partitions)
