@@ -3,6 +3,7 @@
 * bash
 * tmux
   * [Add plugins](https://github.com/tmux-plugins/tpm)
+  * [Copy text selected](https://unix.stackexchange.com/questions/348913/copy-selection-to-a-clipboard-in-tmux)
 * inputrc
 * vim
 * guake terminal: `sudo apt-get install guake -y`
