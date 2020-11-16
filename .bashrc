@@ -144,4 +144,3 @@ alias gd="git diff"
 alias mkdir-date="mkdir $(date +\"%Y-%m-%d\")"
 alias mkdir-time="mkdir $(date +\"%H_%M_%S\")"
 alias mkdir-comb-date-time="mkdir $(date +\"%Y-%m-%d-%H_%M_%S\")"
-
