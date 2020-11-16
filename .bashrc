@@ -137,5 +137,11 @@ alias gc="git commit -m"
 alias gp="git pull"
 alias gd="git diff"
 
-# modifier keys
-setxkbmap -option "caps:ctrl_modifier"
+# modifier keys, consider use gnome-tweak
+# setxkbmap -option "caps:ctrl_modifier"
+
+# mkdir with date/time stamp
+alias mkdir-date="mkdir $(date +\"%Y-%m-%d\")"
+alias mkdir-time="mkdir $(date +\"%H_%M_%S\")"
+alias mkdir-comb-date-time="mkdir $(date +\"%Y-%m-%d-%H_%M_%S\")"
+
