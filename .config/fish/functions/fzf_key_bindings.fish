@@ -1,0 +1,1 @@
+/home/sjhu/.fzf/shell/key-bindings.fish
