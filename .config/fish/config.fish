@@ -7,6 +7,9 @@ set -gx EDITOR vim
 # bind Ctrl+h to accept the default suggestion
 bind \ch forward-char
 
+# make fzf search hidden files too
+set -U fzf_fd_opts --hidden --exclude .git
+
 # aliases
 alias sp="source ~/.config/fish/config.fish"
 alias b="cd .."
