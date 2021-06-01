@@ -4,8 +4,8 @@ set fish_greeting
 # default editor
 set -gx EDITOR vim
 
-# create alias for fd command, needed by fzf.fish
-alias fd=fdfind
+# bind Ctrl+h to accept the default suggestion
+bind \ch forward-char
 
 # aliases
 alias sp="source ~/.config/fish/config.fish"
