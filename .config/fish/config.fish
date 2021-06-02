@@ -11,9 +11,12 @@ bind \ch forward-char
 set -U fzf_fd_opts --hidden --exclude .git
 
 # set tide prompts
-set -g tide_left_prompt_items status newline pwd git virtual_env
+set -g tide_left_prompt_items status newline context pwd git virtual_env
 set -g tide_right_prompt_items
 set -g tide_pwd_truncate_margin 1000000000
+
+# add to PATH ~/.local/bin
+set PATH ~/.local/bin $PATH
 
 # aliases
 alias sp="source ~/.config/fish/config.fish"
@@ -29,3 +32,5 @@ alias gd="git diff"
 
 # bolt config
 set -U BOLT_DISABLE_ANALYTICS true
+
+
