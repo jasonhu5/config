@@ -25,18 +25,20 @@ TODO: make this easier
     sudo apt-add-repository ppa:fish-shell/release-3 && \
     sudo apt-get update -y && \
     sudo apt-get install fish -y
-
-    # enter fish shell
-    fish
     ```
     * Optional reference to make it the default shell: [here](https://fishshell.com/docs/current/tutorial.html#switching-to-fish)
 1. move config folder to destined
     ```
-    mkdir -p ~/.config
-    mv [PATH_TO/REPO]/.config/fish ~/.config
+    mkdir -p ~/.config/fish && \
+    cp .config/fish/config.fish ~/.config/fish
+    ```
+1. Enter fish shell
+    ```
+    fish
     ```
 1. config colors (web GUI)
     ```
+    # configure the color, to e.g. Dracula
     fish_config
     ```
 1. install fisher plugin manager ([ref](https://github.com/jorgebucaran/fisher))
@@ -45,15 +47,31 @@ TODO: make this easier
 
     ```
 1. install packages required by some plugins
-    * fonts required for `tide`: [here](https://github.com/IlanCosman/tide#fonts), also, set the terminal font to these
-    * packages required by `fzf`: [here](https://github.com/PatrickF1/fzf.fish#installation)
-        * **NOTICE**: make symbolic links if necessary for `fd` (see [this](https://github.com/PatrickF1/fzf.fish/discussions/93)) and `bat` ([this](https://github.com/sharkdp/bat#on-ubuntu-using-apt))
+    * fonts required for `tide` ([ref](https://github.com/IlanCosman/tide#fonts))
+        * [MesloLGS NF Regular.ttf](https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true)
+        * [MesloLGS NF Bold.ttf](https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true)
+        * [MesloLGS NF Italic.ttf](https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true)
+        * [MesloLGS NF Bold Italic.ttf](https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true)
+        * Also, set the terminal font to one of these
+    * packages required by `PatrickF1/fzf` ([ref](https://github.com/PatrickF1/fzf.fish#installation))
+        * In fish shell:
+            ``` bash
+            # fzf
+            git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
+            ~/.fzf/install && \
+            # fd
+            sudo apt install fd-find && \
+            ln -s (which fdfind) ~/.local/bin/fd &&\
+            # bat
+            sudo apt install bat && \
+            ln -s /usr/bin/batcat ~/.local/bin/bat
+            ```
 1. install plugins with `fisher`
     ```
     fisher install jorgebucaran/fisher && \
-    fisher install IlanCosman/tide && \
     fisher install franciscolourenco/done && \
     fisher install PatrickF1/fzf.fish && \
+    fisher install IlanCosman/tide
     ```
 
 ### Albert
