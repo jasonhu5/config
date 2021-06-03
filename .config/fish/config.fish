@@ -29,6 +29,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gp="git pull"
 alias gd="git diff"
+alias gb="git branch"
 
 # bolt config
 set -U BOLT_DISABLE_ANALYTICS true
