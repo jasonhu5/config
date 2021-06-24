@@ -60,16 +60,16 @@ TODO: make this easier
             git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
             ~/.fzf/install && \
             # fd
-            sudo apt install fd-find && \
+            sudo apt install fd-find -y && \
             ln -s (which fdfind) ~/.local/bin/fd &&\
             # bat
-            sudo apt install bat && \
+            sudo apt install bat -y && \
             ln -s /usr/bin/batcat ~/.local/bin/bat
             ```
 1. install plugins with `fisher`
     ```
     fisher install jorgebucaran/fisher && \
-    fisher install franciscolourenco/done && \
+    # fisher install franciscolourenco/done && \  # seems problematic
     fisher install PatrickF1/fzf.fish && \
     fisher install IlanCosman/tide
     ```
