@@ -22,7 +22,7 @@
 TODO: make this easier
 1. install fish
     ```bash
-    sudo apt-add-repository ppa:fish-shell/release-3 && \
+    sudo apt-add-repository ppa:fish-shell/release-3 -y && \
     sudo apt-get update -y && \
     sudo apt-get install fish -y
     ```
