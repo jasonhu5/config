@@ -11,7 +11,7 @@ bind \ch forward-char
 set -U fzf_fd_opts --hidden --exclude .git
 
 # set tide prompts
-set -g tide_left_prompt_items status newline context pwd git virtual_env
+set -g tide_left_prompt_items status context pwd git virtual_env
 set -g tide_right_prompt_items
 set -g tide_pwd_truncate_margin 1000000000
 
