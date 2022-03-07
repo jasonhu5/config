@@ -71,7 +71,8 @@ TODO: make this easier
     fisher install jorgebucaran/fisher && \
     # fisher install franciscolourenco/done && \  # seems problematic
     fisher install PatrickF1/fzf.fish && \
-    fisher install IlanCosman/tide
+    fisher install IlanCosman/tide && \
+    fisher install edc/bass    # using bash utilities in fish, check out https://github.com/edc/bass
     ```
 
 ### Albert
