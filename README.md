@@ -7,6 +7,7 @@
     * install xclip first: `sudo apt update && sudo apt install -y xclip`
 * inputrc
 * vim
+  * (maybe? a bit hard to configure this) [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 * guake terminal: `sudo apt-get install guake -y`
 
 ### Ubuntu adjust partition
