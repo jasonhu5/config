@@ -28,11 +28,6 @@ TODO: make this easier
     sudo apt-get install fish -y
     ```
     * Optional reference to make it the default shell: [here](https://fishshell.com/docs/current/tutorial.html#switching-to-fish)
-1. move config folder to destined
-    ```
-    mkdir -p ~/.config/fish && \
-    cp .config/fish/config.fish ~/.config/fish
-    ```
 1. Enter fish shell
     ```
     fish
@@ -74,6 +69,11 @@ TODO: make this easier
     fisher install PatrickF1/fzf.fish && \
     fisher install IlanCosman/tide && \
     fisher install edc/bass    # using bash utilities in fish, check out https://github.com/edc/bass
+    ```
+1. move config folder to destined
+    ```
+    mkdir -p ~/.config/fish && \
+    cp .config/fish/config.fish ~/.config/fish
     ```
 
 ### Albert
