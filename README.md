@@ -75,6 +75,7 @@ TODO: make this easier
     mkdir -p ~/.config/fish && \
     cp .config/fish/config.fish ~/.config/fish
     ```
+1. NOTE: if fuzzy find is not working properly, make sure the versions of dependencies are met: [requirements](https://github.com/PatrickF1/fzf.fish#installation)
 
 ### Albert
 * [DEB based manager](https://albertlauncher.github.io/docs/installing/)
