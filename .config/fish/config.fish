@@ -8,7 +8,7 @@ set -gx EDITOR vim
 bind \ch forward-char
 
 # make fzf search hidden files too
-set -U fzf_fd_opts --hidden --exclude .git
+set -U fzf_fd_opts --hidden --no-ignore --exclude .git
 fzf_configure_bindings --git_status=\cs --git_log=\cl --directory=\cf --processes=\cp
 
 # set tide prompts
