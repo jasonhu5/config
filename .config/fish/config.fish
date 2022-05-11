@@ -19,11 +19,14 @@ set -U tide_pwd_truncate_margin 1000000000
 # add to PATH ~/.local/bin
 set PATH ~/.local/bin $PATH
 
-# aliases
+# # aliases
 alias sp="source ~/.config/fish/config.fish"
 alias b="cd .."
 alias c="clear"
-
+# make dir with date or time
+alias mkdir-date="mkdir (date +'%Y-%m-%d')"
+alias mkdir-time="mkdir (date +'%H_%M_%S')"
+alias mkdir-comb-date-time="mkdir (date +'%Y-%m-%d-%H_%M_%S')"
 # git aliases
 alias gs="git status"
 alias ga="git add"
