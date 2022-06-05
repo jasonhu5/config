@@ -1,8 +1,14 @@
 # Ubuntu config
 
-* bash
+* .bashrc
 * tmux
+    ```
+    mv .tmux ~ && mv .tmux.conf ~
+    ```
   * [Add plugins](https://github.com/tmux-plugins/tpm)
+    ```
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
   * [Copy text selected](https://unix.stackexchange.com/questions/348913/copy-selection-to-a-clipboard-in-tmux)
     * install xclip first: `sudo apt update && sudo apt install -y xclip`
 * inputrc
@@ -17,7 +23,12 @@
 * [backup folders](https://askubuntu.com/questions/302642/how-to-copy-a-directory-from-one-hard-drive-to-another-with-every-single-file)
 
 ### CopyQ
-* [Better install with PPA](https://hluk.github.io/CopyQ/)
+* ([Reference](https://hluk.github.io/CopyQ/))
+    ```
+    sudo add-apt-repository ppa:hluk/copyq -y && \
+    sudo apt update -y && \
+    sudo apt install copyq -y
+    ```
 
 ### Fish
 TODO: make this easier
