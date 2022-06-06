@@ -121,6 +121,9 @@ sudo apt install -y vim
 sub_step "git git-lfs"
 sudo apt install -y git git-lfs
 
+sub_step "python3 venv"
+sudo apt install -y python3-venv
+
 if $desktop; then
   sub_step "guake"
   sudo apt install -y guake
@@ -130,6 +133,13 @@ fi
 ##########################################
 #step "apt autoremove"
 #sudo apt autoremove -y
+
+
+##########################################
+step "Install Docker via convenience script"
+# https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 
 
 # Note: when moving files, the user matters
