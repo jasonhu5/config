@@ -8,6 +8,7 @@
 step_msg=""
 (( sub_step_num=1 ))
 desktop=false
+user_name=""
 
 
 ##########################################
@@ -34,7 +35,7 @@ sub_step() {
 
 disp_usage() {
   # display script usage
-  echo "Usage: sudo bash install.sh headless|desktop"
+  echo "Usage: sudo bash install.sh \$USER headless|desktop"
   echo "  - headless: no GUI applications needed, e.g. guake, copyq"
   echo "  - desktop: GUI applications installed, too"
 }
@@ -42,7 +43,7 @@ disp_usage() {
 
 ##########################################
 # check for valid usage
-if [ "$#" -ne 1 ] || [ "$1" != "headless" ] && [ "$1" != "desktop" ]; then
+if [ "$#" -ne 2 ] || [ "$2" != "headless" ] && [ "$2" != "desktop" ]; then
   # invalid usage
   disp_usage
   # Ref exit codes: https://www.cyberciti.biz/faq/linux-bash-exit-status-set-exit-statusin-bash/
@@ -50,10 +51,15 @@ if [ "$#" -ne 1 ] || [ "$1" != "headless" ] && [ "$1" != "desktop" ]; then
 elif [ "$EUID" -ne 0 ]; then
   disp_usage
   exit 1  # operation not permitted
+elif [ ! -d "/home/$1" ]; then
+  # first argument should be the username
+  disp_usage
+  exit 22
 else
-  if [ "$1" = "desktop" ]; then
+  if [ "$2" = "desktop" ]; then
     desktop=true
   fi
+  user_name=$1
   # verify flag set correctly
   if $desktop; then
     echo ">>> Starting setup for a Desktop device"
@@ -125,18 +131,19 @@ fi
 ##########################################
 step "config files"
 
+user_home_dir="/home/$user_name"
 sub_step ".inputrc"
-mv .inputrc "/home/$USER"
+mv .inputrc "$user_home_dir"
 
 sub_step "vim"
-mv .vimrc "/home/$USER"
-mv .vim "/home/$USER"
+mv .vimrc "$user_home_dir"
+mv .vim "$user_home_dir"
 
 sub_step "tmux"
-mv .tmux.conf "/home/$USER"
-mv .tmux "/home/$USER"
+mv .tmux.conf "$user_home_dir"
+mv .tmux "$user_home_dir"
 # tmux plugins
-git clone https://github.com/tmux-plugins/tpm "/home/$USER/.tmux/plugins/tpm"
+git clone https://github.com/tmux-plugins/tpm "$user_home_dir/.tmux/plugins/tpm"
 
 # sub_step "fish"
 # mkdir -p ~/.config/fish && \
