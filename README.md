@@ -1,5 +1,26 @@
 # Ubuntu config
 
+## Simple setup (fewer steps)
+```
+wget https://github.com/jasonhu5/config/archive/master.zip && \
+unzip master.zip && \
+rm master.zip && \
+cd config-master
+```
+
+* To setup a headless device:
+  ```
+  sudo bash install.sh headless 2>&1 | tee /tmp/initial_setup.log
+  ```
+* To setup a desktop device (with more GUI applications):
+  ```
+  sudo bash install.sh desktop 2>&1 | tee /tmp/initial_setup.log
+  ```
+
+The setup script will print to screen and log the same contents to `/tmp/initial_setup.log`.
+
+## Step by step
+
 * .bashrc
 * tmux
     ```

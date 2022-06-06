@@ -4,7 +4,7 @@
 
 ##########################################
 # globals
-(( step_num=1 ))
+(( step_num=0 ))
 step_msg=""
 (( sub_step_num=1 ))
 desktop=false
@@ -14,12 +14,12 @@ desktop=false
 # functions
 step() {
   # print step number and info
+  (( step_num++ ))
   step_msg="$1"
   echo
   echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
   echo "[Step $step_num]: $step_msg"
   echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-  (( step_num++ ))
   (( sub_step_num=1))
 }
 
@@ -121,21 +121,22 @@ if $desktop; then
 fi
 
 
+# Note: when moving files, the user matters
 ##########################################
 step "config files"
 
 sub_step ".inputrc"
-mv .inputrc ~
+mv .inputrc "/home/$USER"
 
 sub_step "vim"
-mv .vimrc ~
-mv .vim ~
+mv .vimrc "/home/$USER"
+mv .vim "/home/$USER"
 
 sub_step "tmux"
-mv .tmux.conf ~
-mv .tmux ~
+mv .tmux.conf "/home/$USER"
+mv .tmux "/home/$USER"
 # tmux plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm "/home/$USER/.tmux/plugins/tpm"
 
 # sub_step "fish"
 # mkdir -p ~/.config/fish && \
