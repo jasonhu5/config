@@ -127,6 +127,11 @@ if $desktop; then
 fi
 
 
+##########################################
+#step "apt autoremove"
+#sudo apt autoremove -y
+
+
 # Note: when moving files, the user matters
 ##########################################
 step "config files"
