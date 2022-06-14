@@ -124,6 +124,9 @@ sudo apt install -y git git-lfs
 sub_step "python3 venv"
 sudo apt install -y python3-venv
 
+sub_step "make"
+sudo apt install -y make
+
 if $desktop; then
   sub_step "guake"
   sudo apt install -y guake
