@@ -34,6 +34,7 @@ alias gc="git commit -m"
 alias gp="git pull"
 alias gd="git diff"
 alias gb="git branch"
+alias gco="git checkout"
 
 # code search utils
 function cgrep -d "search text in folder"
