@@ -112,6 +112,9 @@ step "install apt packages"
 sub_step "openssh-server"
 sudo apt install -y openssh-server
 
+sub_step "curl"
+sudo apt install -y curl
+
 sub_step "tmux"
 sudo apt install -y tmux
 
