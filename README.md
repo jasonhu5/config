@@ -84,6 +84,7 @@ TODO: make this easier
     * packages required by `PatrickF1/fzf` ([ref](https://github.com/PatrickF1/fzf.fish#installation))
         * In fish shell:
             ``` bash
+            mkdir -p ~/.local/bin && \
             # fzf
             git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
             ~/.fzf/install && \
