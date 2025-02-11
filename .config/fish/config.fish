@@ -12,7 +12,7 @@ set -U fzf_fd_opts --hidden --no-ignore --exclude .git
 fzf_configure_bindings --git_status=\cs --git_log=\cl --directory=\cf --processes=\cp
 
 # set tide prompts
-set --universal tide_left_prompt_items status context pwd git virtual_env
+set --universal tide_left_prompt_items status context pwd git python
 set -U tide_right_prompt_items
 set -U tide_pwd_truncate_margin 1000000000
 
