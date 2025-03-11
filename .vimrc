@@ -53,3 +53,6 @@ map <F12> *<C-O>:%s///gn<CR>
 
 " remap autocomplete to avoid keybinding conflict with tmux
 inoremap <Nul> <C-n>
+
+" transparent bg (or use same setting as terminal)
+hi Normal guibg=NONE ctermbg=NONE
