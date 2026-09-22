@@ -81,11 +81,10 @@ EOF
 
 ${c_red}$BIN_DIR is not on your PATH.${c_reset}
 
-Add this line to your ~/.bashrc, then open a new shell and re-run this script:
+Add this line to your ~/.bashrc, then open a NEW shell and re-run this script:
 
-    . "\$HOME/.local/bin/env"
+    export PATH="\$HOME/.local/bin:\$PATH"
 
-(or, equivalently:  export PATH="\$HOME/.local/bin:\$PATH")
 EOF
       trap - ERR
       exit 1
