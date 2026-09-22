@@ -9,7 +9,9 @@ bind \ch forward-char
 
 # make fzf search hidden files too
 set -U fzf_fd_opts --hidden --no-ignore --exclude .git
-fzf_configure_bindings --git_status=\cs --git_log=\cl --directory=\cf --processes=\cp
+if type -q fzf_configure_bindings
+  fzf_configure_bindings --git_status=\cs --git_log=\cl --directory=\cf --processes=\cp
+end
 
 # set tide prompts
 set --universal tide_left_prompt_items status context pwd git python

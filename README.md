@@ -19,6 +19,16 @@ cd config-master
 
 The setup script will print to screen and log the same contents to `/tmp/initial_setup.log`.
 
+* ***!!NEW!!*** no-sudo setup (assuming exising: `git tar xz which vim wget unzip`)
+  ```
+  chmod +x install_nosudo.sh && ./install_nosudo.sh
+  ```
+  Then, Tide configuration can be later done in fish shell as
+  ```
+  tide configure
+  ```
+  (Check also below on how non-sudo setup can be tested nicely in a Docker container)
+
 ## Step by step
 
 * .bashrc
@@ -109,6 +119,34 @@ TODO: make this easier
     cp .config/fish/config.fish ~/.config/fish
     ```
 1. NOTE: if fuzzy find is not working properly, make sure the versions of dependencies are met: [requirements](https://github.com/PatrickF1/fzf.fish#installation)
+
+### How to test the no-sudo setup in a docker env
+```
+docker run --rm -it rockylinux:9 bash
+```
+(in container)
+
+```
+# as root
+dnf install -y git tar xz findutils which vim wget unzip
+useradd -m tester
+su - tester
+```
+(as tester user)
+```
+# enable app image to run
+export APPIMAGE_EXTRACT_AND_RUN=1
+
+# get this repo
+wget https://github.com/jasonhu5/config/archive/master.zip && \
+unzip master.zip && \
+rm master.zip && \
+cd config-master
+
+# install
+chmod +x install_nosudo.sh
+./install_nosudo.sh
+```
 
 ### Albert
 * [DEB based manager](https://albertlauncher.github.io/docs/installing/)
