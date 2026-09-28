@@ -23,7 +23,13 @@ The setup script will print to screen and log the same contents to `/tmp/initial
   ```
   chmod +x install_nosudo.sh && ./install_nosudo.sh
   ```
-  Then, Tide configuration can be later done in fish shell as
+  Then, ensure tmux sockets live in user home by appending this to `.bashrc`:
+  ```
+  # ensure tmux socket is hosted locally
+  export TMUX_TMPDIR="$HOME/.tmux-sockets"
+  mkdir -p "$TMUX_TMPDIR"
+  ```
+  After re-login or `source .bashrc`, then, Tide configuration can be later done in fish shell as
   ```
   tide configure
   ```
